@@ -1,0 +1,13 @@
+RewriteEngine on
+
+#rediriger la racine
+RewriteCond %{HTTP_HOST} ^manjou.store$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.manjou.store$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
+
+#changer les liens
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#rajouter /public/ quand on met en ligne
+RewriteRule . index.php [L]
