@@ -23,6 +23,7 @@ $match = $router->match();
 si aucun url ne matche on lance la page error 404*/
 if(is_array($match))
 {
+    require '../view/elements/header.php';
     /*on regarde si la target, donc le troisième argument de map est appellable donc on vérifie si c'est une fonction
     et on lui passe les paramètres si elle en a
     si c'est une simple chaîne de caractère on fait un require avec le nom de la target + l'extension .php*/
@@ -34,6 +35,7 @@ if(is_array($match))
     {
         require "../view/{$match['target']}.php";
     }
+    require '../view/elements/footer.php';
 }
 else
 {
