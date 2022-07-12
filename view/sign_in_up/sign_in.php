@@ -21,7 +21,7 @@
                     <div class="card-body text-center">
 
                         <h2 class="text-white-50 fw-bold mb-4">CONNEXION</h2>
-
+                        
                         <form action="">
                             <input type="text" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="Nom d'utilisateur ou E-mail">
                             <input type="password" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="Mot de passe">

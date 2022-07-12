@@ -28,7 +28,6 @@
                             <input type="password" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="Mot de passe">
                             <input type="password" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="Confirmer mot de passe">
 
-                            
                             <button class="btn btn-lg btn-warning fw-bold px-4">S'inscrire</button>
 
                             <p class="fw-bold my-2 py-2">Vous avez déjà un compte ? <a href="<?= $router->generate('connexion') ?>" class="text-white-50 fw-bold">Se connecter</a></p>
