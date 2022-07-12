@@ -16,7 +16,7 @@
 <body class="bg-light-red">
     <div class="container mt-5 pt-5">
         <div class="row">
-            <div class="col-12 col-sm-8 col-md-6 m-auto">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5 m-auto">
                 <div class="card bg-red">
                     <div class="card-body">
                         <form action="">
@@ -26,9 +26,9 @@
                             <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Confirmer mot de passe">
 
                             <div class="text-center mt-3">
-                                <button class="btn btn-warning">S'inscrire</button>
+                                <button class="btn btn-warning fw-bold">S'inscrire</button>
 
-                                <p class="text-black-50 fw-bold">Vous avez déjà un compte ? <a href="" class="text-white-50 fw-bold">Se connecter</a></p>
+                                <p class="fw-bold">Vous avez déjà un compte ? <a href="" class="text-white-50 fw-bold">Se connecter</a></p>
                             </div>
                         </form>
                     </div>

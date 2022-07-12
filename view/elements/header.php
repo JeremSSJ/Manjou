@@ -8,15 +8,8 @@
     }
 </style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- importer bootstrap, les icones et le jquery -->
-    <?php require_once '../view/import/import.php'; ?>
-    
-    <title>Manjou</title>
-</head>
+<!-- importer bootstrap, les icones et le jquery -->
+<?php require_once '../view/import/import.php'; ?>
 
 <body>
     
