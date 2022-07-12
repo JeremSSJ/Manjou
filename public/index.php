@@ -10,9 +10,9 @@ $router->setBasePath('/Manjou/public');
 
 $router->map('GET', '/',  "../view/home", 'home');
 
-$router->map('GET', '/inscription',  "../view/sign_in_up/sign_in", 'inscription');
+$router->map('GET', '/inscription',  "../view/sign_in_up/sign_up", 'inscription');
 
-$router->map('GET', '/connexion',  "../view/sign_in_up/sign_up", 'connexion');
+$router->map('GET', '/connexion',  "../view/sign_in_up/sign_in", 'connexion');
 
 /*
 $router->map('GET', '/test', '../view/test', 'test');
@@ -28,7 +28,6 @@ $match = $router->match();
 si aucun url ne matche on lance la page error 404*/
 if(is_array($match))
 {
-    require_once '../view/elements/header.php';
     /*on regarde si la target, donc le troisième argument de map est appellable donc on vérifie si c'est une fonction
     et on lui passe les paramètres si elle en a
     si c'est une simple chaîne de caractère on fait un require avec le nom de la target + l'extension .php*/
@@ -40,7 +39,6 @@ if(is_array($match))
     {
         require "../view/{$match['target']}.php";
     }
-    require_once '../view/elements/footer.php';
 }
 else
 {
