@@ -10,11 +10,12 @@ $router->setBasePath('/Manjou/public');
 
 $router->map('GET', '/',  "../view/home", 'home');
 
+/*
 $router->map('GET', '/test', '../view/test', 'test');
 
 $router->map('GET', '/page[i:id]', function ($id) {
     require '../view/page.php';
-}, 'page');
+}, 'page');*/
 
 //vérifier si l'url donné correspond à une route
 $match = $router->match();

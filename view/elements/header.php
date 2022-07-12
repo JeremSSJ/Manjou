@@ -37,7 +37,8 @@
                     </button>
                 </form>
 
-
+                <a href="" class=" btn btn-secondary btn-lg px-4 me-md-2">Connexion</a>
+                <a href="" class=" btn btn-outline-secondary btn-lg px-4">Inscription</a>
                 
             </div>
         </div>
