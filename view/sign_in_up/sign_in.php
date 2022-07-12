@@ -28,7 +28,7 @@
 
                             <button class="btn btn-lg btn-warning fw-bold px-4">Connexion</button>
 
-                            <p class="fw-bold my-2 py-2">Vous n'avez pas encore de compte ? <a href="" class="text-white-50 fw-bold">S'inscrire</a></p>
+                            <p class="fw-bold my-2 py-2">Vous n'avez pas encore de compte ? <a href="<?= $router->generate('inscription') ?>" class="text-white-50 fw-bold">S'inscrire</a></p>
                             
                         </form>
                     </div>
