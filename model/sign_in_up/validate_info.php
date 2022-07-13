@@ -2,42 +2,44 @@
 
 $MINLENGHT_USERNAME = 1;
 $MAXLENGHT_USERNAME = 50;
-$MINLENGHT_PASSWORD = 6;
 
+$MINLENGHT_PASSWORD = 6;
+$MAXLENGHT_PASSWORD = 100;
 
 function validUsername($username)
 {
     global $MINLENGHT_USERNAME;
     global $MAXLENGHT_USERNAME;
 
-    if (strlen($username) < $MINLENGHT_USERNAME || strlen($username) > $MAXLENGHT_USERNAME || !preg_match('/^[a-zA-Z\d_]+$/', $username)) {
+    /*on vérifie que le nom d'utilisateur ne contient que des lettres, des chiffres ou un underscore
+    et que sa taille est bien entre 1 et 50*/
+    if (!preg_match('/^\w{' . $MINLENGHT_USERNAME . ',' . $MAXLENGHT_USERNAME . '}$/', $username)) 
+    {
         return false;
     }
+    
     return true;
 }
 
 function validPassword($password)
 {
-    global $MINLENGHT_PASSWORD;                                     //devant crochet * veut dire 0 ou plusieurs et dans le deuxieme cas au moins un
-                                                                    //devant crochet + = au moins 1
-                                                                    //dans deuxieme cas + et * seraient équivalents
+    global $MINLENGHT_PASSWORD;
+    global $MAXLENGHT_PASSWORD;
 
-    if (strlen($password) < $MINLENGHT_PASSWORD || !preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{" . $MINLENGHT_PASSWORD . ",}$/", $password)) {
+    if (strlen($password) < $MINLENGHT_PASSWORD || strlen($password) > $MAXLENGHT_PASSWORD) 
+    {
         return false;
     }
+
     return true;
 }
 
 function validMail($mail)
 {
-    if (filter_var($mail, FILTER_VALIDATE_EMAIL) == false) {
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL) == false) 
+    {
         return false;
     }
 
     return true;
 }
-^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{3,}$
-
-
-
-^(?=.*[A-Za-z\d])[A-Za-z\d]{3,}$
