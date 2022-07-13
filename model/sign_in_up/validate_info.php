@@ -11,7 +11,7 @@ function validUsername($username)
     global $MINLENGHT_USERNAME;
     global $MAXLENGHT_USERNAME;
 
-    /*on vérifie que le nom d'utilisateur ne contient que des lettres, des chiffres ou un underscore
+    /*on vérifie que le nom d'utilisateur ne contient que des lettres, des chiffres ou un underscore grâce à \w
     et que sa taille est bien entre 1 et 50*/
     if (!preg_match('/^\w{' . $MINLENGHT_USERNAME . ',' . $MAXLENGHT_USERNAME . '}$/', $username)) 
     {
