@@ -57,7 +57,16 @@
             success: (feedback) => 
             {
                 displayFeedback("#feedback", feedback);
-            } 
+
+                if(feedback[0] === "success")
+                {
+                    //après 5 secondes on redirige l'utilisateur sur la page home
+                    setTimeout(function() 
+                    { 
+                        window.location = "<?= $router->generate('home') ?>"; 
+                    }, 5000);
+                }
+            }
         });
     });
 </script>
