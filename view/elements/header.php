@@ -55,9 +55,9 @@
                             Connexion
                         </a>
                     <?php else : ?>
-                        <button class="btn btn-warning px-4 mt-1 mt-lg-0" onclick="<?php logout() ?>">
-                            
-                            Se déconnecter
+                        <button class="btn btn-warning px-4 mt-1 mt-lg-0" onclick="<?php logout() ?> window.location.reload();">
+
+                            Déconnexion
                         </button>
                     <?php endif; ?>
 
