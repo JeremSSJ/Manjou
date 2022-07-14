@@ -9,6 +9,16 @@ function startSession()
     }
 }
 
+function login($email, $username, $isAnnouncer, $isAdmin, $creationDate)
+{
+    startSession();
+    $_SESSION['email'] = $email;
+    $_SESSION['username'] = $username;
+    $_SESSION['isAnnouncer'] = $isAnnouncer;
+    $_SESSION['isAdmin'] = $isAdmin;
+    $_SESSION['creationDate'] = $creationDate;
+}
+
 function is_connected()
 {
     //on démarre une session s'il n'y en a pas déjà une active, on a besoin de démarrer cette session pour avoir accès à la variable $_SESSION

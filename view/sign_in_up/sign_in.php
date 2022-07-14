@@ -54,8 +54,17 @@
             data: $("#sign_in_form").serialize(),
             success: (feedback) => 
             {
-                displayFeedback("#feedback", feedback);
-            } 
+                //si feedback n'est pas null c'est qu'il y a une erreur qu'on affiche à l'utilisateur
+                if(feedback === 1)
+                {
+                    window.location = "<?= $router->generate('home') ?>";
+                }
+                else
+                {
+                    displayFeedback("#feedback", feedback);
+                }
+            }
         });
     });
 </script>
+
