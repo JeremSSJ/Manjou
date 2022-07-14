@@ -22,13 +22,16 @@
 
                         <h2 class="text-white-50 fw-bold mb-4">INSCRIPTION</h2>
                         
-                        <form action="">
-                            <input type="text" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="Nom d'utilisateur">
-                            <input type="email" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="E-mail">
-                            <input type="password" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="Mot de passe">
-                            <input type="password" name="" id="" class="form-control form-control-lg my-4 py-2" placeholder="Confirmer mot de passe">
+                        <div id="feedback"></div>
 
-                            <button class="btn btn-lg btn-warning fw-bold px-4">S'inscrire</button>
+                        <form id="sign_up_form">
+                            <input type="text" name="username" class="form-control form-control-lg my-4 py-2" placeholder="Nom d'utilisateur">
+                            <input type="email" name="email" class="form-control form-control-lg my-4 py-2" placeholder="E-mail">
+                            <input type="password" name="password" class="form-control form-control-lg my-4 py-2" placeholder="Mot de passe">
+                            <input type="password" name="passwordConf" class="form-control form-control-lg my-4 py-2" placeholder="Confirmer mot de passe">
+
+                            <!-- utiliser <input type="button" plutôt que la balise <button car celle-ci reload la page -->
+                            <input type="button" id="sign_up" class="btn btn-lg btn-warning fw-bold px-4" value="S'inscrire">
 
                             <p class="fw-bold my-2 py-2">Vous avez déjà un compte ? <a href="<?= $router->generate('connexion') ?>" class="text-white-50 fw-bold">Se connecter</a></p>
                             
@@ -39,3 +42,22 @@
         </div>
     </div>
 </body>
+
+<script type="text/javascript" src="../view/js/displayFeedback.js"></script>
+
+<script>
+    $("#sign_up").click(() =>
+    {
+        $.ajax(
+        {
+            type: "POST",
+            url: "../model/sign_in_up/sign_up.php",
+            dataType: "JSON",
+            data: $("#sign_up_form").serialize(),
+            success: (feedback) => 
+            {
+                displayFeedback("#feedback", feedback);
+            } 
+        });
+    });
+</script>
