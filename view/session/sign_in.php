@@ -48,7 +48,7 @@
         $.ajax(
         {
             type: "POST",
-            url: "../model/sign_in_up/sign_in.php",
+            url: "../model/session/sign_in.php",
             dataType: "JSON",
             data: $("#sign_in_form").serialize(),
             success: (feedback) => 

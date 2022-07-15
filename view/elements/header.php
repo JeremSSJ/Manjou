@@ -11,14 +11,14 @@
 <!-- importer bootstrap, les icones et le jquery -->
 <?php 
     require_once '../view/import/import.php';
-    require_once '../model/sign_in_up/session_handle.php';
+    require_once '../model/session/session_handle.php';
 ?>
 
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark nav-color">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Manjou</a>
+            <a class="navbar-brand" href="<?= $router->generate('home') ?>">Manjou</a>
 
             <!-- button qui va collapse les éléments de la div collapse quand on arrivera en dessous d'une certaine taille d'écran -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +82,7 @@
         {
             $.ajax(
             {
-                url: "../model/sign_in_up/logout.php",
+                url: "../model/session/logout.php",
                 success: () => 
                 {
                     window.location.reload();

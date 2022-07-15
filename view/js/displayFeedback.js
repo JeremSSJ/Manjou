@@ -8,7 +8,7 @@ function displayFeedback(id, feedB)
     } 
     else 
     {
-        f.addClass("alert alert-success");
+        f.removeClass("alert alert-danger").addClass("alert alert-success");
     }
     f.html(feedB[1]);
 }

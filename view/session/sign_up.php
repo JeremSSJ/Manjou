@@ -33,7 +33,7 @@
                             <input type="button" id="sign_up" class="btn btn-lg btn-warning fw-bold px-4" value="S'inscrire">
 
                             <p class="fw-bold my-2 py-2">Vous avez déjà un compte ? <a href="<?= $router->generate('connexion') ?>" class="text-white-50 fw-bold">Se connecter</a></p>
-                            
+                        
                         </form>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
         $.ajax(
         {
             type: "POST",
-            url: "../model/sign_in_up/sign_up.php",
+            url: "../model/session/sign_up.php",
             dataType: "JSON",
             data: $("#sign_up_form").serialize(),
             success: (feedback) => 

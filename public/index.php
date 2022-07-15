@@ -10,9 +10,9 @@ $router->setBasePath('/Manjou/public');
 
 $router->map('GET', '/',  "../view/home", 'home');
 
-$router->map('GET', '/inscription',  "../view/sign_in_up/sign_up", 'inscription');
+$router->map('GET', '/inscription',  "../view/session/sign_up", 'inscription');
 
-$router->map('GET', '/connexion',  "../view/sign_in_up/sign_in", 'connexion');
+$router->map('GET', '/connexion',  "../view/session/sign_in", 'connexion');
 
 /*
 $router->map('GET', '/test', '../view/test', 'test');
