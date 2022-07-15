@@ -18,6 +18,13 @@ function login($email, $username, $isAnnouncer, $isAdmin)
     $_SESSION['isAdmin'] = $isAdmin;
 }
 
+function logout()
+{
+    startSession();
+    session_unset();
+    session_destroy();
+}
+
 function isConnected()
 {
     //on démarre une session s'il n'y en a pas déjà une active, on a besoin de démarrer cette session pour avoir accès à la variable $_SESSION
@@ -27,9 +34,34 @@ function isConnected()
     return !empty($_SESSION['username']);
 }
 
-function logout()
+function getUsername()
 {
-    startSession();
-    session_unset();
-    session_destroy();
+    if(isConnected())
+    {
+        return $_SESSION['username'];
+    }
+}
+
+function getEmail()
+{
+    if(isConnected())
+    {
+        return $_SESSION['email'];
+    }
+}
+
+function isAnnouncer()
+{
+    if(isConnected())
+    {
+        return $_SESSION['isAnnouncer'];
+    }
+}
+
+function isAdmin()
+{
+    if(isConnected())
+    {
+        return $_SESSION['isAdmin'];
+    }
 }
