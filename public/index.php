@@ -14,6 +14,8 @@ $router->map('GET', '/inscription',  "../view/session/sign_up", 'inscription');
 
 $router->map('GET', '/connexion',  "../view/session/sign_in", 'connexion');
 
+$router->map('GET', '/profil',  "../view/profile/profile", 'profil');
+
 /*
 $router->map('GET', '/test', '../view/test', 'test');
 

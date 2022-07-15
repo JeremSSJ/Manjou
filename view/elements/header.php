@@ -83,7 +83,7 @@
                             <?= getUsername() ?>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-lg-end col-12 col-lg-1">
-                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a href="<?= $router->generate('profil') ?>" class="dropdown-item">Profil</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><input type="button" id="deco" class="dropdown-item" value="Déconnexion"></li>
                         </ul>
