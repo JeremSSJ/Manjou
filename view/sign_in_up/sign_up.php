@@ -30,7 +30,6 @@
                             <input type="password" name="password" class="form-control form-control-lg my-4 py-2" placeholder="Mot de passe">
                             <input type="password" name="passwordConf" class="form-control form-control-lg my-4 py-2" placeholder="Confirmer mot de passe">
 
-                            <!-- utiliser <input type="button" plutôt que la balise <button car celle-ci reload la page -->
                             <input type="button" id="sign_up" class="btn btn-lg btn-warning fw-bold px-4" value="S'inscrire">
 
                             <p class="fw-bold my-2 py-2">Vous avez déjà un compte ? <a href="<?= $router->generate('connexion') ?>" class="text-white-50 fw-bold">Se connecter</a></p>

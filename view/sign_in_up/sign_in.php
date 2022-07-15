@@ -28,7 +28,6 @@
                             <input type="text" name="nameormail" class="form-control form-control-lg my-4 py-2" placeholder="Nom d'utilisateur ou e-mail">
                             <input type="password" name="password" class="form-control form-control-lg my-4 py-2" placeholder="Mot de passe">
 
-                            <!-- utiliser <input type="button" plutôt que la balise <button car celle-ci reload la page -->
                             <input type="button" id="sign_in" class="btn btn-lg btn-warning fw-bold px-4" value="Se connecter">
 
                             <p class="fw-bold my-2 py-2">Vous n'avez pas encore de compte ? <a href="<?= $router->generate('inscription') ?>" class="text-white-50 fw-bold">S'inscrire</a></p>
