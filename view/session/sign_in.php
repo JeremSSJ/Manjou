@@ -40,7 +40,7 @@
     </div>
 </body>
 
-<script type="text/javascript" src="../view/js/displayFeedback.js"></script>
+<script type="text/javascript" src="js/displayFeedback.js"></script>
 
 <script>
     $("#sign_in").click(() =>
@@ -48,7 +48,7 @@
         $.ajax(
         {
             type: "POST",
-            url: "../model/session/sign_in.php",
+            url: "model/session/sign_in.php",
             dataType: "JSON",
             data: $("#sign_in_form").serialize(),
             success: (feedback) => 

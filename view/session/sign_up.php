@@ -42,7 +42,7 @@
     </div>
 </body>
 
-<script type="text/javascript" src="../view/js/displayFeedback.js"></script>
+<script type="text/javascript" src="js/displayFeedback.js"></script>
 
 <script>
     $("#sign_up").click(() =>
@@ -50,7 +50,7 @@
         $.ajax(
         {
             type: "POST",
-            url: "../model/session/sign_up.php",
+            url: "model/session/sign_up.php",
             dataType: "JSON",
             data: $("#sign_up_form").serialize(),
             success: (feedback) => 

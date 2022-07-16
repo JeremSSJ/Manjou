@@ -11,7 +11,7 @@
 <!-- importer bootstrap, les icones et le jquery -->
 <?php 
     require_once '../view/import/import.php';
-    require_once '../model/session/session_handle.php';
+    require_once 'model/session/session_handle.php';
 ?>
 
 <body>
@@ -101,7 +101,7 @@
         {
             $.ajax(
             {
-                url: "../model/session/logout.php",
+                url: "model/session/logout.php",
                 success: () => 
                 {
                     window.location.reload();
