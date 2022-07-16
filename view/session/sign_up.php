@@ -59,11 +59,11 @@
 
                 if(feedback[0] === "success")
                 {
-                    //après 5 secondes on redirige l'utilisateur sur la page d'annonces
+                    //après 4 secondes on redirige l'utilisateur sur la page d'annonces
                     setTimeout(function() 
                     { 
                         window.location = "<?= $router->generate('annonces') ?>"; 
-                    }, 5000);
+                    }, 4000);
                 }
             }
         });

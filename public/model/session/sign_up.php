@@ -65,4 +65,4 @@ require_once 'session_handle.php';
 
 login($email, $username, 0, 0);
 
-leave(["success", "Votre compte a été créé avec succès.<br>Vous allez être redirigé dans 5 secondes."]);
+leave(["success", "Votre compte a été créé avec succès.<br>Vous allez être redirigé dans 4 secondes."]);
