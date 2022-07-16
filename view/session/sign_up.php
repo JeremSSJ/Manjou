@@ -59,10 +59,10 @@
 
                 if(feedback[0] === "success")
                 {
-                    //après 5 secondes on redirige l'utilisateur sur la page home
+                    //après 5 secondes on redirige l'utilisateur sur la page d'annonces
                     setTimeout(function() 
                     { 
-                        window.location = "<?= $router->generate('home') ?>"; 
+                        window.location = "<?= $router->generate('annonces') ?>"; 
                     }, 5000);
                 }
             }

@@ -56,7 +56,7 @@
                 //si feedback n'est pas null c'est qu'il y a une erreur qu'on affiche à l'utilisateur
                 if(feedback === 1)
                 {
-                    window.location = "<?= $router->generate('home') ?>";
+                    window.location = "<?= $router->generate('annonces') ?>";
                 }
                 else
                 {

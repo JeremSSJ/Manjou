@@ -8,7 +8,7 @@ $router = new AltoRouter();
 //mettre en commentaire cette ligne lorsqu'on met en ligne et déplacer htaccess dans le dossier parent
 $router->setBasePath('/Manjou/public');
 
-$router->map('GET', '/',  "../view/home", 'home');
+$router->map('GET', '/',  "../view/ads/ads", 'annonces');
 
 $router->map('GET', '/inscription',  "../view/session/sign_up", 'inscription');
 
