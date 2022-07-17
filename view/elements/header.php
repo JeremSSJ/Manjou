@@ -16,7 +16,7 @@
 
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark nav-color">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark nav-color">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?= $router->generate('annonces') ?>">Manjou</a>
 
