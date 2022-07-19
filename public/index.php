@@ -16,6 +16,10 @@ $router->map('GET', '/connexion',  "../view/session/sign_in", 'connexion');
 
 $router->map('GET', '/profil',  "../view/profile/profile", 'profil');
 
+$router->map('GET', '/mes-annonces',  "../view/seller/my_ads", 'mesannonces');
+
+$router->map('GET', '/nouvelle-annonce',  "../view/seller/new_ad", 'nouvannonce');
+
 /*
 $router->map('GET', '/test', '../view/test', 'test');
 
