@@ -106,7 +106,7 @@
                 url: "model/session/logout.php",
                 success: () => 
                 {
-                    window.location.reload();
+                    window.location = "<?= $router->generate('home') ?>"; 
                 }
             });
         });
