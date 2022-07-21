@@ -2,6 +2,7 @@
 
 //fichier pour importer la classe AltoRouter qui a été installée avec composer
 require '../vendor/autoload.php';
+require_once 'model/session/session_handle.php';
 
 $router = new AltoRouter();
 
@@ -14,11 +15,50 @@ $router->map('GET', '/inscription',  "../view/session/sign_up", 'inscription');
 
 $router->map('GET', '/connexion',  "../view/session/sign_in", 'connexion');
 
-$router->map('GET', '/profil',  "../view/profile/profile", 'profil');
+/*ici on a besoin de faire des vérifications pour éviter que l'utilisateur accède aux pages en utilisant
+l'url sans être connecté*/
+$router->map('GET', '/profil', 
+function() 
+{
+    //ici besoin de mettre router en global comme la fonction peut l'utiliser
+    global $router;
+    if(isConnected())
+    {
+        require_once "../view/profile/profile.php";
+    }
+    else
+    {
+        header("Location: " . $router->generate('home'));
+    }
+}, 'profil');
 
-$router->map('GET', '/mes-annonces',  "../view/seller/my_ads", 'mesannonces');
+$router->map('GET', '/mes-annonces', 
+function() 
+{
+    global $router;
+    if(isAnnouncer())
+    {
+        require_once "../view/seller/my_ads.php";
+    }
+    else
+    {
+        header("Location: " . $router->generate('home'));
+    }
+}, 'mesannonces');
 
-$router->map('GET', '/nouvelle-annonce',  "../view/seller/new_ad", 'nouvannonce');
+$router->map('GET', '/nouvelle-annonce',
+function() 
+{
+    global $router;
+    if(isAnnouncer())
+    {
+        require_once "../view/seller/new_ad.php";
+    }
+    else
+    {
+        header("Location: " . $router->generate('home'));
+    }
+}, 'nouvannonce');
 
 /*
 $router->map('GET', '/test', '../view/test', 'test');
@@ -43,10 +83,10 @@ if(is_array($match))
     }
     else
     {
-        require "../view/{$match['target']}.php";
+        require_once "../view/{$match['target']}.php";
     }
 }
 else
 {
-    require '../view/error/error404.php';
+    require_once '../view/error/error404.php';
 }

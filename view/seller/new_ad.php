@@ -1,14 +1,7 @@
-<?php require_once '../view/elements/header.php'; ?>
-
 <?php require_once '../view/seller/elements/sidebar.php'; ?>
 
 
+<h1>Nouvelle annonce</h1>
 
 
-
-
-
-
-
-
-<?php require_once '../view/elements/footer.php'; ?>
+<?php require_once '../view/seller/elements/sidebar.php'; ?>
