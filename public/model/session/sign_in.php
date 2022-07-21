@@ -1,7 +1,7 @@
 <?php
 
 require_once "../PDO/pdo.php";
-require_once '../util/util_func.php';
+require_once '../util/leave.php';
 
 $nameormail = $_POST['nameormail'];
 $password = $_POST['password'];

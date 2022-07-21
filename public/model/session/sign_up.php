@@ -1,7 +1,7 @@
 <?php
 
 require_once 'validate_info.php';
-require_once '../util/util_func.php';
+require_once '../util/leave.php';
 
 $username = $_POST['username'];
 $email = $_POST['email'];
