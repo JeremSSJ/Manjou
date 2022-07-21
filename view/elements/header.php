@@ -18,7 +18,7 @@
     
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark nav-color">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?= $router->generate('annonces') ?>">Manjou</a>
+            <a class="navbar-brand" href="<?= $router->generate('home') ?>">Manjou</a>
 
             <!-- button qui va collapse les éléments de la div collapse quand on arrivera en dessous d'une certaine taille d'écran -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,6 +95,8 @@
             </div>
         </div>
     </nav>
+    
+    <div class="container-fluid">
 
     <script>
         $("#deco").click(() =>

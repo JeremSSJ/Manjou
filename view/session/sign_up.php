@@ -62,7 +62,7 @@
                     //après 4 secondes on redirige l'utilisateur sur la page d'annonces
                     setTimeout(function() 
                     { 
-                        window.location = "<?= $router->generate('annonces') ?>"; 
+                        window.location = "<?= $router->generate('home') ?>"; 
                     }, 4000);
                 }
             }
