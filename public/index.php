@@ -38,7 +38,7 @@ function()
     global $router;
     if(isAnnouncer())
     {
-        require_once "../view/seller/my_ads.php";
+        require_once "../view/announcer/my_ads.php";
     }
     else
     {
@@ -52,7 +52,7 @@ function()
     global $router;
     if(isAnnouncer())
     {
-        require_once "../view/seller/new_ad.php";
+        require_once "../view/announcer/new_ad.php";
     }
     else
     {
