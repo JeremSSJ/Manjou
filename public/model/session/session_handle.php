@@ -9,10 +9,9 @@ function startSession()
     }
 }
 
-function login($id, $email, $username, $isAnnouncer, $isAdmin)
+function login($email, $username, $isAnnouncer, $isAdmin)
 {
     startSession();
-    $_SESSION['id'] = $id;
     $_SESSION['email'] = $email;
     $_SESSION['username'] = $username;
     $_SESSION['isAnnouncer'] = $isAnnouncer;
@@ -32,15 +31,7 @@ function isConnected()
     startSession();
 
     //on renvoie true s'il y a bien quelquechose dans ($_SESSION['username']
-    return !empty($_SESSION['username']);
-}
-
-function getId()
-{
-    if(isConnected())
-    {
-        return $_SESSION['id'];
-    }
+    return !empty($_SESSION['email']);
 }
 
 function getUsername()

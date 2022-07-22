@@ -1,7 +1,7 @@
 <?php require_once '../view/elements/header.php'; ?>
 
 <div class="row flex-nowrap">
-    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 nav-color " ><!--position-fixed-->
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 nav-color position-fixed" ><!--position-fixed-->
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
                 
             <span class="fs-5 d-none d-md-inline text-white">Gestion de vos annonces</span>
@@ -32,6 +32,11 @@
             </ul>
         </div>
     </div>
-        
+    
+    <!-- Comme position-fixed a sorti la sidebar du flux courant on met des colonnes pour prendre de la place-->
+    <div class="col-2 col-md-3 col-xl-2"></div> 
+
     <!-- juste col comme ça bootstrap va créer une colonne correspondant à la taille restante -->
     <div class="col py-3">
+
+    
