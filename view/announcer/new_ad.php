@@ -48,6 +48,8 @@
     </form>
 </div>
 
+<?php require_once '../view/announcer/elements/footer.php'; ?>
+
 <script type="text/javascript" src="js/displayFeedback.js"></script>
 
 <script>
