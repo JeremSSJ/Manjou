@@ -107,8 +107,18 @@ $announce_id = getPdo()->lastInsertId();
 foreach($_FILES['images']['name'] as $key=>$val) 
 {
     $extension = strtolower(pathinfo($val, PATHINFO_EXTENSION));
+    $new_name = $announce_id . '_' . $key . '.' . $extension;
 
-    move_uploaded_file($_FILES['images']['tmp_name'][$key], '../../img/' . $announce_id . '_' . $key . '.' . $extension);
+    move_uploaded_file($_FILES['images']['tmp_name'][$key], '../../img/' . $new_name);
+
+    $sql = "insert ignore into images_annonce values(:imgname, :announceid);";
+
+    $params = [
+        "imgname" => $new_name,
+        "announceid" => $announce_id
+    ];
+
+    preparedStmt($sql, $params);
 }
 
 leave(["success", "Votre annonce a bien été créée."]);
