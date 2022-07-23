@@ -6,6 +6,8 @@ $MAXLENGHT_USERNAME = 50;
 $MINLENGHT_PASSWORD = 6;
 $MAXLENGHT_PASSWORD = 100;
 
+$MAXLENGHT_EMAIL = 100;
+
 function validUsername($username)
 {
     global $MINLENGHT_USERNAME;
@@ -36,7 +38,8 @@ function validPassword($password)
 
 function validMail($mail)
 {
-    if (filter_var($mail, FILTER_VALIDATE_EMAIL) == false) 
+    global $MAXLENGHT_EMAIL;
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL) == false || strlen($mail) > $MAXLENGHT_EMAIL) 
     {
         return false;
     }

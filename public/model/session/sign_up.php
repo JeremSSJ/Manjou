@@ -15,7 +15,7 @@ if (!validUsername($username))
 
 if (!validMail($email)) 
 {
-    leave(["error", "Format d'e-mail incorrect."]);
+    leave(["error", "L'e-mail doit avoir le bon format et ne peut dépasser " . $MAXLENGHT_EMAIL . " caractères."]);
 }
 
 if (!validPassword($password)) 
@@ -51,7 +51,7 @@ if (!empty($result))
 }
 
 //comme tout a été vérifié, on peut mettre les infos du nouvel utilisateur dans la bd
-$sql = "insert ignore into utilisateur values(NULL, :email, :username, :hash, 0, 0, date(now()));";
+$sql = "insert ignore into utilisateur values(:email, :username, :hash, 0, 0, date(now()));";
 
 $params = [
     "email" => $email,
